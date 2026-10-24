@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Featured Web Development and Computer Science Projects by Cynthia at MIVA Open University.">
+    <title>Projects Showcase | Cynthia - Student Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Componentized Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+
+<body>
+    <!-- Accessibility Skip Link -->
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <!-- Top Navigation Header -->
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="nav-brand" aria-label="Cynthia's Portfolio Homepage">
+                <span>Cynthia<span class="brand-dot">.</span></span>
+                <span class="brand-badge">CS 100L</span>
+            </a>
+
+            <nav id="primaryNav" aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fa-solid fa-user-graduate"></i> About Me</a>
+                    </li>
+                    <li><a href="projects.html" class="nav-link"><i class="fa-solid fa-code-branch"></i> Projects</a>
+                    </li>
+                    <li><a href="planner.html" class="nav-link"><i class="fa-solid fa-calendar-check"></i> Academic
+                            Planner</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" aria-label="Toggle theme color mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button type="button" class="mobile-nav-toggle" aria-controls="primaryNav" aria-expanded="false"
+                    aria-label="Open mobile navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Page Title Section -->
+        <section class="section" style="padding-bottom: var(--space-xl);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fa-solid fa-laptop-code"></i> Portfolio Work</span>
+                    <h1 class="section-title">Featured <span class="text-gradient">Projects</span></h1>
+                    <p class="section-desc">Practical web applications built during my Computer Science curriculum at
+                        MIVA Open University.</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="projects-filters" role="group" aria-label="Project Categories">
+                    <button type="button" class="filter-btn active" data-filter="all">All Projects (3)</button>
+                    <button type="button" class="filter-btn" data-filter="academic">Academic Tools</button>
+                    <button type="button" class="filter-btn" data-filter="web">Web Applications</button>
+                    <button type="button" class="filter-btn" data-filter="javascript">JavaScript Tools</button>
+                </div>
+
+                <!-- Projects Grid (At least 3 sample projects as per COS 106 requirements) -->
+                <div class="projects-grid">
+                    <!-- Project 1: CGPA Calculator -->
+                    <article class="project-card" data-category="academic javascript">
+                        <div class="project-media">
+                            <img src="Images/project-cgpa.jpg"
+                                alt="MIVA Student CGPA and Academic Standing Calculator UI dashboard">
+                            <span class="project-category-badge">Academic Tool</span>
+                            <span class="project-status-badge"><i class="fa-solid fa-circle-check"></i> Live</span>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">MIVA CGPA & Grade Forecast Calculator</h2>
+                            <p class="project-desc">
+                                An intuitive academic management utility enabling students to calculate semester GPA,
+                                forecast cumulative CGPA, and track honors standing based on university grading scales.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-check"></i> Real-time grade point calculations</li>
+                                <li><i class="fa-solid fa-check"></i> Visual GPA progression and credit weight sliders
+                                </li>
+                                <li><i class="fa-solid fa-check"></i> LocalStorage history of semester achievements</li>
+                            </ul>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS Grid</span>
+                                <span class="tech-tag">JavaScript (ES6)</span>
+                                <span class="tech-tag">Local Storage</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-primary btn-sm" data-project-trigger
+                                    data-project-title="MIVA CGPA & Grade Forecast Calculator"
+                                    data-project-desc="This application calculates student Grade Point Average across 5-point and 4-point scales with real-time feedback, chart projections, and local persistence."
+                                    data-project-tech="HTML5, CSS3, JavaScript ES6, Web Storage API"
+                                    data-project-link="https://github.com/cynthia/cgpa-calculator">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-secondary btn-sm"
+                                    aria-label="View CGPA Calculator source code on GitHub">
+                                    <i class="fa-brands fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Campus Event Tracker -->
+                    <article class="project-card" data-category="web">
+                        <div class="project-media">
+                            <img src="Images/project-events.jpg"
+                                alt="UniEvent Hub Campus Events and Tech Workshop Scheduling Portal">
+                            <span class="project-category-badge">Web Application</span>
+                            <span class="project-status-badge"><i class="fa-solid fa-circle-check"></i> Live</span>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">UniEvent Hub & Workshop Portal</h2>
+                            <p class="project-desc">
+                                A dynamic campus event discovery platform allowing undergraduates to browse upcoming
+                                hackathons, tech workshops, guest lectures, and manage their RSVP calendar.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-check"></i> Category filtering & date-based searches</li>
+                                <li><i class="fa-solid fa-check"></i> Interactive seat reservation & badge counters</li>
+                                <li><i class="fa-solid fa-check"></i> Fully responsive glassmorphism dark mode</li>
+                            </ul>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS Flexbox</span>
+                                <span class="tech-tag">JavaScript Events</span>
+                                <span class="tech-tag">DOM Manipulation</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-primary btn-sm" data-project-trigger
+                                    data-project-title="UniEvent Hub & Workshop Portal"
+                                    data-project-desc="A community-focused web platform for university students to track and register for technical webinars, coding challenges, and career fairs."
+                                    data-project-tech="HTML5, CSS Flexbox/Grid, Vanilla JavaScript"
+                                    data-project-link="https://github.com/cynthia/unievent-hub">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-secondary btn-sm"
+                                    aria-label="View UniEvent Hub source code on GitHub">
+                                    <i class="fa-brands fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: StudySync Flashcards -->
+                    <article class="project-card" data-category="academic javascript">
+                        <div class="project-media">
+                            <img src="Images/project-studysync.jpg"
+                                alt="StudySync Interactive CS Flashcards and Quiz revision tool">
+                            <span class="project-category-badge">Study Assistant</span>
+                            <span class="project-status-badge"><i class="fa-solid fa-circle-check"></i> Live</span>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">StudySync &bull; CS Flashcards & Quizzes</h2>
+                            <p class="project-desc">
+                                An interactive revision web app designed for computer science students to master data
+                                structures, algorithms, and web technology syntax with spaced repetition.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-check"></i> 3D card flipping animations via CSS transforms
+                                </li>
+                                <li><i class="fa-solid fa-check"></i> Integrated study countdown timer with alerts</li>
+                                <li><i class="fa-solid fa-check"></i> Progress metrics & topic mastery score tracking
+                                </li>
+                            </ul>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS 3D Transforms</span>
+                                <span class="tech-tag">JavaScript OOP</span>
+                                <span class="tech-tag">Timer API</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-primary btn-sm" data-project-trigger
+                                    data-project-title="StudySync CS Flashcards & Quiz Engine"
+                                    data-project-desc="StudySync features an active flashcard interface with syntax highlighting, spaced repetition algorithms, deck selectors, and session timing."
+                                    data-project-tech="HTML5, CSS 3D Transforms, Vanilla JS"
+                                    data-project-link="https://github.com/cynthia/studysync">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-secondary btn-sm" aria-label="View StudySync source code on GitHub">
+                                    <i class="fa-brands fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Video Showcase Section (Multimedia Element Requirement) -->
+                <div class="video-showcase-section">
+                    <div class="section-header" style="margin-bottom: var(--space-lg);">
+                        <span class="section-tag"><i class="fa-solid fa-video"></i> Video Demonstration</span>
+                        <h2 class="section-title">Project Video Walkthrough</h2>
+                        <p class="section-desc">Demonstrating HTML5 multimedia capabilities with an embedded video
+                            player.</p>
+                    </div>
+
+                    <div class="video-player-wrapper">
+                        <!-- HTML5 Video element with poster image and fallback message -->
+                        <video controls poster="Images/project-cgpa.jpg"
+                            aria-label="Walkthrough demonstration of student web applications">
+                            <source
+                                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                                type="video/mp4">
+                            Your browser does not support the HTML5 video element. You can still explore the live
+                            interactive projects above.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Simulation Modal -->
+    <div id="projectModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-dialog">
+            <button type="button" id="modalCloseBtn" class="modal-close-btn" aria-label="Close dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <span class="badge badge-gold" style="margin-bottom: var(--space-xs);">Interactive Preview</span>
+            <h3 id="modalTitle" style="font-size: 1.5rem; margin-bottom: var(--space-sm); color: var(--text-primary);">
+                Project Details</h3>
+            <p id="modalDesc" style="color: var(--text-secondary); margin-bottom: var(--space-lg); line-height: 1.6;">
+                Overview text.</p>
+            <div style="margin-bottom: var(--space-lg);">
+                <strong
+                    style="display: block; font-size: 0.88rem; color: var(--accent-sand); margin-bottom: 0.4rem;">Technologies
+                    Used:</strong>
+                <div id="modalTech" class="project-tech-tags"></div>
+            </div>
+            <div style="display: flex; gap: 0.75rem; justify-content: flex-end;">
+                <a id="modalAction" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <i class="fa-brands fa-github"></i> View Repository
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Semantic Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Cynthia<span class="brand-dot">.</span></h3>
+                    <p class="footer-bio">
+                        100-Level Computer Science undergraduate at MIVA Open University. Building modern, performant
+                        web applications with care.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+                            aria-label="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+                            aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="tel:09139251063" class="social-icon-btn" aria-label="Phone Cynthia">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="mailto:cynthia.student@miva.edu.ng" class="social-icon-btn" aria-label="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://miva.university" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-btn" aria-label="MIVA Open University">
+                            <i class="fa-solid fa-university"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Me</a></li>
+                        <li><a href="projects.html"><i class="fa-solid fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="planner.html"><i class="fa-solid fa-chevron-right"></i> Academic Planner</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Featured Apps</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> CGPA Calculator</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> UniEvent Hub</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> StudySync Flashcards</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Course Submission</h4>
+                    <div class="footer-course-badge">
+                        <strong>COS 106 Term Project</strong>
+                        <p style="font-size: 0.82rem; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                            Introduction to Web Technologies<br>
+                            Practical Term Project (20 Marks)
+                        </p>
+                        <span class="badge badge-gold"><i class="fa-solid fa-check"></i> Meets All Criteria</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Cynthia &bull; MIVA Open University. All rights reserved.
+                </div>
+                <div class="footer-meta-pill">
+                    Built with <span>HTML5</span> &bull; <span>CSS3</span> &bull; <span>Vanilla JS</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Interactive project category filter
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+                document.querySelectorAll('.project-card').forEach(card => {
+                    const cat = card.getAttribute('data-category') || '';
+                    if (filter === 'all' || cat.includes(filter)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

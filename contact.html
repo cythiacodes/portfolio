@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Cynthia: Get in touch for academic inquiries, web development collaborations, or peer mentorship.">
+    <title>Contact Me | Cynthia - Student Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="nav-brand" aria-label="Cynthia's Portfolio Homepage">
+                <span>Cynthia<span class="brand-dot">.</span></span>
+                <span class="brand-badge">CS 100L</span>
+            </a>
+
+            <nav id="primaryNav" aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fa-solid fa-user-graduate"></i> About Me</a></li>
+                    <li><a href="projects.html" class="nav-link"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+                    <li><a href="planner.html" class="nav-link"><i class="fa-solid fa-calendar-check"></i> Academic Planner</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" aria-label="Toggle theme color mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button type="button" class="mobile-nav-toggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Open mobile navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fa-solid fa-envelope-open-text"></i> Connect With Me</span>
+                    <h1 class="section-title">Get In <span class="text-gradient">Touch</span></h1>
+                    <p class="section-desc">
+                        Have a question about my academic projects, front-end development, or want to collaborate? Send a message through the form below.
+                    </p>
+                </div>
+
+                <div class="contact-layout">
+                    <aside class="contact-info-panel" aria-label="Contact Information">
+                        <div class="contact-card-box">
+                            <h3>Contact Information</h3>
+                            <p class="contact-intro-text">
+                                Feel free to reach out via phone, email, or connected academic networks. I typically reply within 24 hours.
+                            </p>
+
+                            <ul class="contact-channels-list">
+                                <li class="contact-channel-item">
+                                    <div class="contact-channel-icon">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div class="contact-channel-details">
+                                        <strong>Phone Number</strong>
+                                        <a href="tel:09139251063">09139251063</a>
+                                    </div>
+                                </li>
+
+                                <li class="contact-channel-item">
+                                    <div class="contact-channel-icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-channel-details">
+                                        <strong>Student Email</strong>
+                                        <a href="mailto:cynthia.student@miva.edu.ng">cynthia.student@miva.edu.ng</a>
+                                    </div>
+                                </li>
+
+                                <li class="contact-channel-item">
+                                    <div class="contact-channel-icon">
+                                        <i class="fa-solid fa-building-columns"></i>
+                                    </div>
+                                    <div class="contact-channel-details">
+                                        <strong>Institution</strong>
+                                        <span>MIVA Open University &bull; Computer Science</span>
+                                    </div>
+                                </li>
+
+                                <li class="contact-channel-item">
+                                    <div class="contact-channel-icon">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div class="contact-channel-details">
+                                        <strong>Location</strong>
+                                        <span>Abuja, Nigeria &bull; UTC+1</span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="office-hours-card">
+                                <h4><i class="fa-regular fa-clock"></i> Peer Collaboration Hours</h4>
+                                <p>Mondays &ndash; Thursdays: 3:00 PM &ndash; 6:00 PM (West Africa Time)</p>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <section class="contact-form-panel" aria-labelledby="formHeading">
+                        <h2 id="formHeading" style="font-size: 1.5rem; margin-bottom: 0.35rem;">Send a Message</h2>
+                        <p class="form-subtext">All fields are validated with custom client-side JavaScript as specified in the assignment rubric.</p>
+
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="input-container">
+                                <label for="contactName">
+                                    Your Full Name <span class="required-star">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-user input-icon"></i>
+                                    <input 
+                                        type="text" 
+                                        id="contactName" 
+                                        name="name" 
+                                        class="contact-input" 
+                                        placeholder="e.g. Cynthia Okon" 
+                                        autocomplete="name" 
+                                        required
+                                    >
+                                </div>
+                                <span id="contactNameError" class="validation-error-msg" role="alert"></span>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="contactEmail">
+                                    Email Address <span class="required-star">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-envelope input-icon"></i>
+                                    <input 
+                                        type="email" 
+                                        id="contactEmail" 
+                                        name="email" 
+                                        class="contact-input" 
+                                        placeholder="e.g. student@miva.edu.ng" 
+                                        autocomplete="email" 
+                                        required
+                                    >
+                                </div>
+                                <span id="contactEmailError" class="validation-error-msg" role="alert"></span>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="contactPhone">
+                                    Phone Number <span class="required-star">*</span>
+                                    <small style="font-weight: 400; color: var(--text-muted);">(Digits only)</small>
+                                </label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-phone-volume input-icon"></i>
+                                    <input 
+                                        type="tel" 
+                                        id="contactPhone" 
+                                        name="phone" 
+                                        class="contact-input" 
+                                        placeholder="e.g. 09139251063" 
+                                        autocomplete="tel" 
+                                        required
+                                    >
+                                </div>
+                                <span id="contactPhoneError" class="validation-error-msg" role="alert"></span>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="contactMessage">
+                                    Message <span class="required-star">*</span>
+                                </label>
+                                <textarea 
+                                    id="contactMessage" 
+                                    name="message" 
+                                    class="contact-textarea" 
+                                    rows="5" 
+                                    placeholder="Write your academic inquiry, feedback, or collaboration details..." 
+                                    required
+                                ></textarea>
+                                <span id="contactMessageError" class="validation-error-msg" role="alert"></span>
+                            </div>
+
+                            <button type="submit" id="contactSubmitBtn" class="btn btn-primary" style="align-self: flex-start; padding: 0.9rem 2.2rem;">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+
+                        <div id="contactSuccessBanner" class="form-success-banner" role="status">
+                            <div class="success-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h4>Thank You!</h4>
+                            <p>Your message has been successfully received and validated.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Cynthia<span class="brand-dot">.</span></h3>
+                    <p class="footer-bio">
+                        100-Level Computer Science undergraduate at MIVA Open University. Building modern, performant web applications with care.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="tel:09139251063" class="social-icon-btn" aria-label="Phone Cynthia">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="mailto:cynthia.student@miva.edu.ng" class="social-icon-btn" aria-label="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://miva.university" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="MIVA Open University">
+                            <i class="fa-solid fa-university"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Me</a></li>
+                        <li><a href="projects.html"><i class="fa-solid fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="planner.html"><i class="fa-solid fa-chevron-right"></i> Academic Planner</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Validation Rules</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#"><i class="fa-solid fa-check"></i> No field empty</a></li>
+                        <li><a href="#"><i class="fa-solid fa-check"></i> Email format check</a></li>
+                        <li><a href="#"><i class="fa-solid fa-check"></i> Digits-only phone</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Course Submission</h4>
+                    <div class="footer-course-badge">
+                        <strong>COS 106 Term Project</strong>
+                        <p style="font-size: 0.82rem; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                            Interactive Form Validation Requirement<br>
+                            JavaScript Regex & DOM Feedback
+                        </p>
+                        <span class="badge badge-gold"><i class="fa-solid fa-check"></i> Meets All Criteria</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Cynthia &bull; MIVA Open University. All rights reserved.
+                </div>
+                <div class="footer-meta-pill">
+                    Built with <span>HTML5</span> &bull; <span>CSS3</span> &bull; <span>Vanilla JS</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

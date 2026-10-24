@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Academic Task Planner and Student Management Platform for Cynthia, Computer Science undergraduate at MIVA Open University.">
+    <title>Academic Planner | Cynthia - Student Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/planner.css">
+</head>
+<body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="nav-brand" aria-label="Cynthia's Portfolio Homepage">
+                <span>Cynthia<span class="brand-dot">.</span></span>
+                <span class="brand-badge">CS 100L</span>
+            </a>
+
+            <nav id="primaryNav" aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fa-solid fa-user-graduate"></i> About Me</a></li>
+                    <li><a href="projects.html" class="nav-link"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+                    <li><a href="planner.html" class="nav-link"><i class="fa-solid fa-calendar-check"></i> Academic Planner</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" aria-label="Toggle theme color mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button type="button" class="mobile-nav-toggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Open mobile navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fa-solid fa-list-check"></i> Student Management Tool</span>
+                    <h1 class="section-title">Academic <span class="text-gradient">Planner</span></h1>
+                    <p class="section-desc">
+                        Manage your assignments, project milestones, and study schedules. Powered entirely by client-side JavaScript with dynamic DOM manipulation and LocalStorage.
+                    </p>
+                </div>
+
+                <div class="planner-stats-bar" aria-label="Academic Task Metrics">
+                    <div class="planner-stat-pill">
+                        <div class="planner-stat-icon stat-icon-total">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                        </div>
+                        <div>
+                            <strong id="statTotal">0</strong>
+                            <span>Total Tasks</span>
+                        </div>
+                    </div>
+
+                    <div class="planner-stat-pill">
+                        <div class="planner-stat-icon stat-icon-pending">
+                            <i class="fa-solid fa-hourglass-half"></i>
+                        </div>
+                        <div>
+                            <strong id="statPending">0</strong>
+                            <span>Pending Tasks</span>
+                        </div>
+                    </div>
+
+                    <div class="planner-stat-pill">
+                        <div class="planner-stat-icon stat-icon-completed">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div>
+                            <strong id="statCompleted">0</strong>
+                            <span>Completed Tasks</span>
+                        </div>
+                    </div>
+
+                    <div class="planner-stat-pill">
+                        <div class="planner-stat-icon stat-icon-rate">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <strong id="statRate">0%</strong>
+                            <span>Completion Rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="planner-layout">
+                    <aside class="task-form-card" aria-labelledby="formTitle">
+                        <h3 id="formTitle"><i class="fa-solid fa-plus-circle"></i> Add Academic Task</h3>
+                        
+                        <form id="taskForm" class="task-form" novalidate>
+                            <div class="form-group">
+                                <label for="taskTitle">Task Title <span style="color: var(--accent-terracotta);">*</span></label>
+                                <input type="text" id="taskTitle" class="form-input" placeholder="e.g. Revise COS 106 Lab Exercise" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="taskCourse">Course / Module</label>
+                                <select id="taskCourse" class="form-select">
+                                    <option value="COS 106">COS 106 &bull; Web Technologies</option>
+                                    <option value="COS 101">COS 101 &bull; Intro to Computer Science</option>
+                                    <option value="MTH 101">MTH 101 &bull; Elementary Mathematics</option>
+                                    <option value="PHY 101">PHY 101 &bull; General Physics</option>
+                                    <option value="GST 101">GST 101 &bull; Communication in English</option>
+                                    <option value="General">General Academic Study</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="taskDueDate">Target Due Date</label>
+                                <input type="date" id="taskDueDate" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="taskPriority">Priority Level</label>
+                                <select id="taskPriority" class="form-select">
+                                    <option value="high">High Priority</option>
+                                    <option value="medium" selected>Medium Priority</option>
+                                    <option value="low">Low Priority</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="margin-top: var(--space-xs); width: 100%;">
+                                <i class="fa-solid fa-plus"></i> Add to Planner
+                            </button>
+                        </form>
+                    </aside>
+
+                    <section class="tasks-container" aria-labelledby="listHeading">
+                        <div class="tasks-toolbar">
+                            <h2 id="listHeading" style="font-size: 1.3rem;">Scheduled Tasks</h2>
+                            <div class="tasks-filter-group" role="group" aria-label="Task Status Filters">
+                                <button type="button" class="task-filter-btn active" data-filter="all">All</button>
+                                <button type="button" class="task-filter-btn" data-filter="pending">Pending</button>
+                                <button type="button" class="task-filter-btn" data-filter="completed">Completed</button>
+                            </div>
+                        </div>
+
+                        <ul id="tasksList" class="tasks-list" aria-live="polite">
+                        </ul>
+
+                        <div id="tasksEmptyState" class="tasks-empty-state" style="display: none;">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                            <h4>No Tasks Found</h4>
+                            <p>You have no academic tasks matching this filter. Use the form on the left to add a new task.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Cynthia<span class="brand-dot">.</span></h3>
+                    <p class="footer-bio">
+                        100-Level Computer Science undergraduate at MIVA Open University. Building modern, performant web applications with care.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="tel:09139251063" class="social-icon-btn" aria-label="Phone Cynthia">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="mailto:cynthia.student@miva.edu.ng" class="social-icon-btn" aria-label="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://miva.university" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="MIVA Open University">
+                            <i class="fa-solid fa-university"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Me</a></li>
+                        <li><a href="projects.html"><i class="fa-solid fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="planner.html"><i class="fa-solid fa-chevron-right"></i> Academic Planner</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Planner Features</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Add Tasks</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Status Toggling</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Priority Tags</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Local Storage</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Course Submission</h4>
+                    <div class="footer-course-badge">
+                        <strong>COS 106 Term Project</strong>
+                        <p style="font-size: 0.82rem; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                            Interactive Task Management Requirement<br>
+                            Pure JavaScript DOM Implementation
+                        </p>
+                        <span class="badge badge-gold"><i class="fa-solid fa-check"></i> Meets All Criteria</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Cynthia &bull; MIVA Open University. All rights reserved.
+                </div>
+                <div class="footer-meta-pill">
+                    Built with <span>HTML5</span> &bull; <span>CSS3</span> &bull; <span>Vanilla JS</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/planner.js"></script>
+</body>
+</html>

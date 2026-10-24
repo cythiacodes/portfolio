@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Academic Portfolio and Student Management Website for Cynthia, 100-Level Computer Science Student at MIVA Open University.">
+    <meta name="keywords" content="Cynthia, MIVA Open University, Computer Science, Front-End Developer, Portfolio, Academic Planner, Web Technologies">
+    <meta name="author" content="Cynthia">
+    <title>Cynthia | Student Portfolio & Academic Hub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="nav-brand" aria-label="Cynthia's Portfolio Homepage">
+                <span>Cynthia<span class="brand-dot">.</span></span>
+                <span class="brand-badge">CS 100L</span>
+            </a>
+
+            <nav id="primaryNav" aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fa-solid fa-user-graduate"></i> About Me</a></li>
+                    <li><a href="projects.html" class="nav-link"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+                    <li><a href="planner.html" class="nav-link"><i class="fa-solid fa-calendar-check"></i> Academic Planner</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" aria-label="Toggle theme color mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button type="button" class="mobile-nav-toggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Open mobile navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <section class="section hero-section" aria-labelledby="heroHeading">
+            <div class="hero-glow-1"></div>
+            <div class="hero-glow-2"></div>
+
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-pill">
+                        <span class="status-dot"></span>
+                        <span>MIVA Open University &bull; Computer Science</span>
+                    </div>
+
+                    <h1 id="heroHeading" class="hero-title">
+                        Hello, I'm <span class="text-gradient">Cynthia</span>
+                    </h1>
+
+                    <p class="hero-lead">
+                        A dedicated <strong>100-level Computer Science student</strong> and aspiring <strong>Front-End Engineer</strong> with a <strong>4.0 / 5.0 First Semester GPA</strong>. Focused on modern web architecture, clean code, and intuitive user experiences.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="projects.html" class="btn btn-primary">
+                            <i class="fa-solid fa-diagram-project"></i> View My Projects
+                        </a>
+                        <a href="planner.html" class="btn btn-secondary">
+                            <i class="fa-solid fa-list-check"></i> Academic Planner
+                        </a>
+                        <a href="contact.html" class="btn btn-outline">
+                            <i class="fa-solid fa-envelope"></i> Get in Touch
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <figure class="hero-image-wrapper">
+                        <img src="Images/profile-pic.jpeg" alt="Professional studio portrait of Cynthia, 100-level Computer Science student" class="hero-image">
+                    </figure>
+
+                    <div class="floating-badge badge-top-left">
+                        <div class="floating-badge-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="floating-badge-text">
+                            <strong>Front-End Developer</strong>
+                            <span>HTML5 &bull; CSS3 &bull; Modern JS</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom-right">
+                        <div class="floating-badge-icon">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="floating-badge-text">
+                            <strong>4.0 / 5.0 GPA</strong>
+                            <span>First Semester Result</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" aria-label="Academic Achievements and Statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number text-gradient">100L</div>
+                        <div class="stat-label">Current Academic Level</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number text-gradient">4.0 / 5.0</div>
+                        <div class="stat-label">First Semester GPA</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number text-gradient">10+</div>
+                        <div class="stat-label">Lab Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number text-gradient">100%</div>
+                        <div class="stat-label">Curiosity & Dedication</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="bioHeading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fa-solid fa-id-card"></i> Student Biography</span>
+                    <h2 id="bioHeading" class="section-title">Bridging Theory with Practical Code</h2>
+                    <p class="section-desc">An overview of my academic mission and technical pursuits at MIVA Open University.</p>
+                </div>
+
+                <div class="card bio-card-inner">
+                    <div class="bio-card-text">
+                        <p>
+                            I am currently a 100-level undergraduate studying <strong>Computer Science</strong> at <strong>MIVA Open University</strong>. After finishing my first semester with an exceptional <strong>4.0 / 5.0 GPA</strong>, I am continuing to expand my capabilities across modern web development and computing theory.
+                        </p>
+                        <p>
+                            Through coursework such as <strong>COS 106 (Introduction to Web Technologies)</strong>, I have mastered fundamental and modern development standards, from semantic HTML5 architecture and responsive CSS layouts to client-side DOM manipulation and interactive JavaScript systems.
+                        </p>
+                        <ul class="bio-highlights-list">
+                            <li><i class="fa-solid fa-circle-check"></i> First Semester Academic Honors &bull; 4.0 / 5.0 GPA</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Strong foundation in Algorithms, Problem Solving, and Computing Logic</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Passionate about UI/UX accessibility, responsive styling, and modular code</li>
+                        </ul>
+                    </div>
+                    <div class="bio-card-actions">
+                        <div class="card" style="background: var(--bg-secondary); border-color: var(--border-medium);">
+                            <h3 style="font-size: 1.2rem; margin-bottom: 0.75rem;"><i class="fa-solid fa-graduation-cap" style="color: var(--accent-terracotta);"></i> Academic Focus</h3>
+                            <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                                Currently building interactive client-side web applications, responsive component design systems, and data-driven tools.
+                            </p>
+                            <a href="about.html" class="btn btn-primary btn-sm">
+                                Read Full Academic Profile <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" aria-labelledby="quickExploreHeading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fa-solid fa-compass"></i> Explore The Platform</span>
+                    <h2 id="quickExploreHeading" class="section-title">Core Assignment Modules</h2>
+                    <p class="section-desc">Explore each required component of the COS 106 term project.</p>
+                </div>
+
+                <div class="quick-pages-grid">
+                    <a href="about.html" class="quick-page-card">
+                        <div class="quick-card-icon">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <h3>About Me</h3>
+                        <p>Discover my educational timeline, current semester timetable, career aspirations, technical skills, and personal hobbies.</p>
+                        <span class="quick-card-link">View Academic Profile <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="projects.html" class="quick-page-card">
+                        <div class="quick-card-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3>Projects Showcase</h3>
+                        <p>Explore real-world web applications including the CGPA Calculator, Campus Event Tracker, StudySync Flashcards, and video showcase.</p>
+                        <span class="quick-card-link">Explore Projects <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="planner.html" class="quick-page-card">
+                        <div class="quick-card-icon">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3>Academic Planner</h3>
+                        <p>An interactive, client-side task management application built with JavaScript featuring add, complete, delete, and stats.</p>
+                        <span class="quick-card-link">Launch Planner <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Cynthia<span class="brand-dot">.</span></h3>
+                    <p class="footer-bio">
+                        100-Level Computer Science undergraduate at MIVA Open University. Building modern, performant web applications with care.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="tel:09139251063" class="social-icon-btn" aria-label="Phone Cynthia">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="mailto:cynthia.student@miva.edu.ng" class="social-icon-btn" aria-label="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://miva.university" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="MIVA Open University">
+                            <i class="fa-solid fa-university"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Me</a></li>
+                        <li><a href="projects.html"><i class="fa-solid fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="planner.html"><i class="fa-solid fa-chevron-right"></i> Academic Planner</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Academic Info</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html#education"><i class="fa-solid fa-chevron-right"></i> Education (100L)</a></li>
+                        <li><a href="about.html#timetable"><i class="fa-solid fa-chevron-right"></i> Course Timetable</a></li>
+                        <li><a href="about.html#skills"><i class="fa-solid fa-chevron-right"></i> Technical Skills</a></li>
+                        <li><a href="about.html#aspirations"><i class="fa-solid fa-chevron-right"></i> Career Goals</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Course Submission</h4>
+                    <div class="footer-course-badge">
+                        <strong>COS 106 Term Project</strong>
+                        <p style="font-size: 0.82rem; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                            Introduction to Web Technologies<br>
+                            Practical Term Project (20 Marks)
+                        </p>
+                        <span class="badge badge-gold"><i class="fa-solid fa-check"></i> Fully Responsive</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Cynthia &bull; MIVA Open University. All rights reserved.
+                </div>
+                <div class="footer-meta-pill">
+                    Built with <span>HTML5</span> &bull; <span>CSS3</span> &bull; <span>Vanilla JS</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
